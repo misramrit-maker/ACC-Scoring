@@ -98,6 +98,7 @@ body{background:var(--bg);color:var(--white);font-family:'DM Sans',sans-serif;mi
 </div>
 <script>
 var SHEET_ID='103Q-Zwh__0O0AodbsKq1bcBcI9mU1qDtFR8v1Nxt3MA';
+var SYNC_URL='https://script.google.com/macros/s/AKfycbwOMzB4iHdQWYpam3fhwy8TC_mau1Z4-uO11p_npKo-VNnVKbU7dpH0aWFOTS27tFUb/exec';
 var timer=null;
 
 function getParam(k){return new URLSearchParams(window.location.search).get(k);}
@@ -124,18 +125,14 @@ async function gviz(sheet){
 }
 
 async function getTabNames(){
-  // Fetch the spreadsheet htmlview to scrape tab names
-  var url='https://docs.google.com/spreadsheets/d/'+SHEET_ID+'/htmlview?t='+Date.now();
+  // Ask the Apps Script for the list of match tabs
+  var url=SYNC_URL+'?action=tabs&t='+Date.now();
   var r=await fetch(url);
-  var html=await r.text();
-  var tabs=[];
-  var re=/aria-label="([^"]+)"\s+aria-selected/g;
-  var m;
-  while((m=re.exec(html))!==null){
-    var n=m[1];
-    if(n!=='Squad'&&n.indexOf(' v ')!==-1)tabs.push(n);
+  var data=await r.json();
+  if(data.status==='ok'&&data.tabs&&data.tabs.length){
+    return data.tabs;
   }
-  return tabs;
+  return [];
 }
 
 function parseRows(rows){
