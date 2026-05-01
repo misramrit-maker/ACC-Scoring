@@ -2047,24 +2047,27 @@ function buildSyncRows() {
   return rows;
 }
 
+// ── CONFIG: set this to your GitHub Pages base URL ────────────────────────────
+var LIVE_BASE_URL = 'https://misramrit-maker.github.io/ACC-Scoring/live.html';
+// ─────────────────────────────────────────────────────────────────────────────
+
 function showShareBar() {
-  var sheetUrl = 'https://docs.google.com/spreadsheets/d/103Q-Zwh__0O0AodbsKq1bcBcI9mU1qDtFR8v1Nxt3MA/edit#gid=0';
-  // Try to get the specific sheet tab URL
   var bar = document.getElementById('share-bar');
-  var linkText = document.getElementById('share-link-text');
   if (bar) bar.style.display = 'flex';
-  if (linkText) linkText.textContent = sheetUrl;
-  ST.shareUrl = sheetUrl;
+  // Build shareable URL with match name encoded
+  var matchParam = encodeURIComponent(ST.matchSheetName || '');
+  ST.shareUrl = LIVE_BASE_URL + (matchParam ? '?match=' + matchParam : '');
 }
 
 function copyShareLink() {
-  var url = ST.shareUrl || 'https://docs.google.com/spreadsheets/d/103Q-Zwh__0O0AodbsKq1bcBcI9mU1qDtFR8v1Nxt3MA';
+  var url = ST.shareUrl || LIVE_BASE_URL;
   navigator.clipboard.writeText(url).then(function() {
     var btn = event.target;
+    var orig = btn.textContent;
     btn.textContent = '✓ Copied!';
-    setTimeout(function(){ btn.textContent = 'Copy Link'; }, 2000);
+    setTimeout(function(){ btn.textContent = orig; }, 2000);
   }).catch(function() {
-    prompt('Copy this link:', url);
+    prompt('Copy this link to share the live score:', url);
   });
 }
 
