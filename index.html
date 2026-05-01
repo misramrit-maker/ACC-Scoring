@@ -171,6 +171,51 @@ body{background:#011a0d;color:var(--white);font-family:'DM Sans',sans-serif;min-
 .lineup-arrow{background:rgba(1,138,61,0.2);border:1px solid rgba(1,138,61,0.3);border-radius:3px;width:22px;height:18px;cursor:pointer;color:#7de8a8;font-size:10px;display:flex;align-items:center;justify-content:center;transition:background 0.15s}
 .lineup-arrow:hover{background:rgba(1,138,61,0.4)}
 .summary-wrap{padding:20px;display:flex;flex-direction:column;gap:16px;max-width:640px;margin:0 auto;width:100%}
+.live-wrap{padding:16px;display:flex;flex-direction:column;gap:12px;max-width:640px;margin:0 auto;width:100%}
+.live-score-card{background:linear-gradient(180deg,#013d20,#011f0f);border:1px solid rgba(57,255,20,0.2);border-radius:14px;padding:18px}
+.ls-batting-team{font-size:11px;color:rgba(255,255,255,0.4);letter-spacing:1.5px;text-transform:uppercase;font-weight:600;margin-bottom:8px}
+.ls-score-big{display:flex;align-items:baseline;gap:6px;margin-bottom:5px}
+.ls-runs{font-family:'Playfair Display',serif;font-size:58px;font-weight:900;color:#fff;line-height:1;text-shadow:0 2px 12px rgba(0,0,0,0.4)}
+.ls-sep{font-size:28px;color:rgba(255,255,255,0.3);line-height:1}
+.ls-wkts{font-family:'Playfair Display',serif;font-size:36px;font-weight:700;color:rgba(255,255,255,0.5);line-height:1}
+.ls-overs{font-size:13px;color:rgba(255,255,255,0.45);margin-bottom:14px}
+.ls-overs span{color:#39ff14;font-weight:700}
+.ls-batters{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
+.ls-batter{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:10px 12px}
+.ls-batter.on-strike{border-color:rgba(57,255,20,0.45);background:rgba(57,255,20,0.08)}
+.ls-batter-name{font-size:13px;font-weight:700;color:#fff;display:flex;align-items:center;gap:6px;margin-bottom:5px}
+.ls-strike-dot{width:7px;height:7px;border-radius:50%;background:#39ff14;box-shadow:0 0 6px #39ff14;flex-shrink:0}
+.ls-batter-stats{display:flex;gap:10px}
+.ls-stat{display:flex;flex-direction:column;align-items:center}
+.ls-stat-val{font-size:16px;font-weight:800;color:#fff;line-height:1}
+.ls-stat-lbl{font-size:9px;color:rgba(255,255,255,0.35);letter-spacing:1px;text-transform:uppercase;margin-top:1px}
+.ls-bowler{background:rgba(0,0,0,0.25);border-radius:8px;padding:9px 12px;display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.ls-bowler-lbl{font-size:9px;color:rgba(255,255,255,0.3);letter-spacing:2px;text-transform:uppercase;font-weight:700}
+.ls-bowler-name{font-size:14px;color:#fff;font-weight:600;flex:1}
+.ls-bowler-figs{font-size:13px;color:#39ff14;font-weight:700}
+.ls-extras{display:flex;gap:0;background:rgba(0,0,0,0.15);border-radius:8px;overflow:hidden;margin-bottom:10px}
+.ls-extra-cell{flex:1;text-align:center;padding:7px 4px;border-right:1px solid rgba(255,255,255,0.06)}
+.ls-extra-cell:last-child{border-right:none}
+.ls-extra-lbl{font-size:9px;color:rgba(255,255,255,0.3);letter-spacing:1px;text-transform:uppercase;display:block;margin-bottom:2px}
+.ls-extra-val{font-size:15px;font-weight:700;color:#fff;display:block}
+.ls-rr-row{display:flex;gap:8px;margin-bottom:4px}
+.ls-rr-box{flex:1;background:rgba(57,255,20,0.07);border:1px solid rgba(57,255,20,0.2);border-radius:8px;padding:9px;text-align:center}
+.ls-rr-lbl{font-size:9px;color:rgba(255,255,255,0.3);letter-spacing:1.5px;text-transform:uppercase;display:block;margin-bottom:3px}
+.ls-rr-val{font-size:17px;font-weight:800;color:#39ff14}
+.ls-sc-section{background:rgba(1,56,31,0.5);border:1px solid rgba(57,255,20,0.15);border-radius:10px;padding:12px;margin-top:4px}
+.ls-sc-title{font-size:9px;color:#39ff14;letter-spacing:1.5px;text-transform:uppercase;font-weight:700;margin-bottom:8px}
+.ls-table{width:100%;border-collapse:collapse;font-size:12px}
+.ls-table th{text-align:left;padding:5px 6px;color:rgba(255,255,255,0.3);font-size:9px;letter-spacing:1px;text-transform:uppercase;border-bottom:1px solid rgba(255,255,255,0.07)}
+.ls-table th:not(:first-child){text-align:right}
+.ls-table td{padding:7px 6px;border-bottom:1px solid rgba(255,255,255,0.05);color:rgba(255,255,255,0.7)}
+.ls-table td:not(:first-child){text-align:right}
+.ls-table tr.ls-batting-now td{color:#fff;font-weight:700}
+.ls-table tr.ls-out td{color:rgba(255,255,255,0.3)}
+.ls-table tr.ls-bowling-now td:first-child{color:#39ff14;font-weight:700}
+.ls-table .ls-total td{color:#39ff14;font-weight:700;border-top:1px solid rgba(57,255,20,0.2);border-bottom:none;padding-top:8px}
+.live-refresh-bar{text-align:center;font-size:11px;color:var(--muted);padding:6px}
+.live-refresh-bar span{color:#39ff14;font-weight:600}
+.back-to-scorer{background:rgba(57,255,20,0.1);border:1.5px solid #39ff14;border-radius:10px;padding:11px;cursor:pointer;color:#39ff14;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;width:100%;text-align:center;margin-bottom:8px}
 .btn-section-label{font-size:9px;color:rgba(255,255,255,0.3);letter-spacing:2px;text-transform:uppercase;font-weight:700;padding:8px 14px 4px}
 .nb-sub-btn{background:rgba(57,255,20,0.1);border:1.5px solid #39ff14;border-radius:8px;padding:10px 2px;cursor:pointer;color:#39ff14;font-family:'DM Sans',sans-serif;font-size:11px;font-weight:700;transition:all 0.15s;text-align:center;text-shadow:0 0 8px rgba(57,255,20,0.5)}
 .nb-sub-btn:hover{background:rgba(57,255,20,0.22);box-shadow:0 0 10px rgba(57,255,20,0.3)}
@@ -331,6 +376,11 @@ body{background:#011a0d;color:var(--white);font-family:'DM Sans',sans-serif;min-
         <div class="match-type-badge" id="match-type-label">T20</div>
       </div>
       <div id="batting-team-name" style="font-size:11px;color:rgba(255,255,255,0.45);letter-spacing:1px;text-transform:uppercase;font-weight:600;margin-bottom:8px"></div>
+      <div id="share-bar" style="display:none;background:rgba(57,255,20,0.08);border:1px solid rgba(57,255,20,0.3);border-radius:8px;padding:8px 12px;margin-bottom:10px;display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+        <span style="font-size:10px;color:#39ff14;letter-spacing:1px;text-transform:uppercase;font-weight:700;flex-shrink:0">🔴 Live</span>
+        <button onclick="showScreen('live');startLiveViewer()" style="background:rgba(57,255,20,0.2);border:1px solid #39ff14;border-radius:5px;padding:4px 10px;cursor:pointer;color:#39ff14;font-size:11px;font-weight:700;flex-shrink:0">View Live Score</button>
+        <button onclick="copyShareLink()" style="background:transparent;border:1px solid rgba(57,255,20,0.4);border-radius:5px;padding:4px 10px;cursor:pointer;color:rgba(57,255,20,0.7);font-size:11px;font-weight:600;flex-shrink:0">Copy Sheet Link</button>
+      </div>
       <div class="score-big">
         <div class="score-runs" id="score-runs">0</div>
         <div class="score-sep">/</div>
@@ -466,6 +516,15 @@ body{background:#011a0d;color:var(--white);font-family:'DM Sans',sans-serif;min-
       </button>
       <div id="sheets-status" style="text-align:center;font-size:12px;padding:4px 0;display:none"></div>
       <button class="new-match-btn" onclick="newMatch()">New Match</button>
+    </div>
+  </div>
+  <!-- LIVE SCORE SCREEN -->
+  <div id="screen-live" class="screen">
+    <div class="live-wrap">
+      <div class="live-score-card" id="live-score-card">
+        <div style="text-align:center;padding:40px;color:var(--muted)">Loading live score...</div>
+      </div>
+      <div class="live-refresh-bar" id="live-refresh-bar"></div>
     </div>
   </div>
 </div>
@@ -626,7 +685,8 @@ var ST = {
   setupBatter1:'',
   setupBatter2:'',
   lastBowlerName:'',
-  matchSheetName:''
+  matchSheetName:'',
+  shareUrl:''
 };
 
 var squadList = [];
@@ -882,6 +942,7 @@ function startMatch() {
   ST.matchSheetName = (firstTeam.name + ' v ' + secondTeam.name + ' ' + matchDate).substring(0, 100);
   createMatchTab(ST.matchSheetName);
   showScreen('scoring');
+  showShareBar();
   // If opening batters were filled in setup, skip the lineup modal
   if (ST.setupBatter1 && ST.setupBatter2) {
     var bt = getBattingTeam();
@@ -1801,6 +1862,7 @@ function updateUI() {
     row.appendChild(chip);
   }
   updateLiveScorecard();
+  autoSync();
 }
 
 function showScreen(name) {
@@ -1871,6 +1933,259 @@ function doRestartMatch() {
   ST.lastBowlerName = '';
   document.getElementById('innings-badge').textContent = '1st Innings';
   openLineupModal();
+}
+
+// ── AUTO-SYNC ─────────────────────────────────────────────────────────────────
+var syncTimer = null;
+var syncPending = false;
+
+function autoSync() {
+  // Debounce: wait 2 seconds after last ball before syncing
+  if (syncTimer) clearTimeout(syncTimer);
+  syncTimer = setTimeout(function() {
+    silentSync();
+  }, 2000);
+}
+
+async function silentSync() {
+  if (!ST.matchSheetName) return;
+  var liveStatus = document.getElementById('live-save-status');
+  if (liveStatus) liveStatus.textContent = 'Syncing...';
+  try {
+    var rows = buildSyncRows();
+    var formData = new FormData();
+    formData.append('data', JSON.stringify({ sheetName: ST.matchSheetName, rows: rows }));
+    var resp = await fetch(SYNC_URL, { method: 'POST', body: formData });
+    var data = await resp.json();
+    if (data.status === 'ok') {
+      var now = new Date().toLocaleTimeString('en-IE', {hour:'2-digit', minute:'2-digit'});
+      if (liveStatus) liveStatus.textContent = '🟢 Synced ' + now;
+    } else {
+      if (liveStatus) liveStatus.textContent = '⚠ Sync failed';
+    }
+  } catch(e) {
+    if (liveStatus) liveStatus.textContent = '⚠ Offline';
+  }
+}
+
+function buildSyncRows() {
+  var firstTeam = ST.teams[ST.firstBatTeamIdx];
+  var secondTeam = ST.teams[1 - ST.firstBatTeamIdx];
+  var inn0 = ST.score[0];
+  var inn1 = ST.score[1];
+  var date = new Date().toLocaleDateString('en-IE');
+  var rows = [];
+
+  // ── LIVE SCORE SUMMARY (top of sheet — easy to see at a glance) ──────────
+  var bt = getBattingTeam();
+  var inn = getInnings();
+  var co = Math.floor(inn.balls/6), rb = inn.balls%6;
+  var b1 = bt.players[ST.curStrikerIdx];
+  var b2 = bt.players[ST.curNonStrikerIdx];
+  var bwt = getBowlingTeam();
+  var bowler = ST.curBowlerIdx >= 0 ? bwt.players[ST.curBowlerIdx] : null;
+  var rr = inn.balls > 0 ? (inn.runs / (inn.balls/6)).toFixed(2) : '0.00';
+
+  rows.push(['🏏 LIVE SCORE', '', '', '', '', '', '']);
+  rows.push([ST.matchSheetName, '', '', '', '', '', '']);
+  rows.push(['Last Updated', new Date().toLocaleTimeString('en-IE'), '', '', '', '', '']);
+  rows.push(['', '', '', '', '', '', '']);
+  rows.push([bt.name + ' batting', '', '', '', '', '', '']);
+  rows.push([inn.runs + '/' + inn.wkts, '(' + co + '.' + rb + ' overs)', 'RR: ' + rr, '', '', '', '']);
+  rows.push(['', '', '', '', '', '', '']);
+  rows.push(['Striker', b1 ? b1.name : '-', b1 ? b1.runs + ' (' + b1.balls + ')' : '-', 'SR: ' + (b1 && b1.balls > 0 ? (b1.runs/b1.balls*100).toFixed(0) : '-'), '', '', '']);
+  rows.push(['Non-striker', b2 ? b2.name : '-', b2 ? b2.runs + ' (' + b2.balls + ')' : '-', '', '', '', '']);
+  rows.push(['Bowling', bowler ? bowler.name : '-', '', '', '', '', '']);
+  rows.push(['Extras', 'Wd:'+inn.extras.wide+' NB:'+inn.extras.nb+' Lb:'+inn.extras.lb+' B:'+inn.extras.b, '', '', '', '', '']);
+  rows.push(['', '', '', '', '', '', '']);
+
+  // ── BATTING SCORECARD ────────────────────────────────────────────────────
+  rows.push([ST.innings === 0 ? '1ST INNINGS' : '2ND INNINGS', '', '', '', '', '', '']);
+  rows.push(['Batter', 'How Out', 'Runs', 'Balls', '4s', '6s', 'SR']);
+  bt.players.forEach(function(p, i) {
+    if (p.balls > 0 || p.out || i === ST.curStrikerIdx || i === ST.curNonStrikerIdx) {
+      var sr = p.balls > 0 ? (p.runs/p.balls*100).toFixed(0) : '-';
+      var status = p.out ? p.dismissal : (i === ST.curStrikerIdx ? 'batting *' : (i === ST.curNonStrikerIdx ? 'batting' : 'not out'));
+      rows.push([p.name, status, p.runs, p.balls, p.fours, p.sixes, sr]);
+    }
+  });
+  var totalExtras = inn.extras.wide + inn.extras.nb + inn.extras.lb + inn.extras.b;
+  rows.push(['Extras', '', totalExtras, '', '', '', '']);
+  rows.push(['TOTAL', '', inn.runs+'/'+inn.wkts+' ('+co+'.'+rb+' ov)', '', '', '', '']);
+  rows.push(['', '', '', '', '', '', '']);
+
+  // ── BOWLING ──────────────────────────────────────────────────────────────
+  rows.push(['Bowling', '', '', '', '', '', '']);
+  rows.push(['Bowler', 'Overs', 'Runs', 'Wkts', 'Economy', '', '']);
+  inn.bowlers.forEach(function(rec) {
+    var p = bwt.players[rec.idx];
+    if (!p) return;
+    var econ = rec.overs > 0 ? (rec.runs/rec.overs).toFixed(2) : '-';
+    var overStr = rec.idx === ST.curBowlerIdx && inn.balls%6 > 0 ? rec.overs+'.'+(inn.balls%6) : rec.overs+'.0';
+    rows.push([p.name + (rec.idx === ST.curBowlerIdx ? ' *' : ''), overStr, rec.runs, rec.wkts, econ, '', '']);
+  });
+  rows.push(['', '', '', '', '', '', '']);
+
+  // ── PREVIOUS INNINGS (if 2nd innings) ────────────────────────────────────
+  if (ST.innings === 1 && inn0.balls > 0) {
+    var prevCo = Math.floor(inn0.balls/6), prevRb = inn0.balls%6;
+    rows.push(['1ST INNINGS - ' + firstTeam.name.toUpperCase(), '', '', '', '', '', '']);
+    rows.push(['Batter', 'How Out', 'Runs', 'Balls', '4s', '6s', 'SR']);
+    firstTeam.players.forEach(function(p) {
+      if (p.balls > 0 || p.out) {
+        var sr = p.balls > 0 ? (p.runs/p.balls*100).toFixed(0) : '-';
+        rows.push([p.name, p.out ? p.dismissal : 'not out', p.runs, p.balls, p.fours, p.sixes, sr]);
+      }
+    });
+    rows.push(['TOTAL', '', inn0.runs+'/'+inn0.wkts+' ('+prevCo+'.'+prevRb+' ov)', '', '', '', '']);
+    var target = inn0.runs + 1;
+    var need = target - inn.runs;
+    var ballsLeft = ST.maxOvers*6 - inn.balls;
+    rows.push(['Target', target, 'Need: '+need+' from '+ballsLeft+' balls', '', '', '', '']);
+  }
+
+  return rows;
+}
+
+function showShareBar() {
+  var sheetUrl = 'https://docs.google.com/spreadsheets/d/103Q-Zwh__0O0AodbsKq1bcBcI9mU1qDtFR8v1Nxt3MA/edit#gid=0';
+  // Try to get the specific sheet tab URL
+  var bar = document.getElementById('share-bar');
+  var linkText = document.getElementById('share-link-text');
+  if (bar) bar.style.display = 'flex';
+  if (linkText) linkText.textContent = sheetUrl;
+  ST.shareUrl = sheetUrl;
+}
+
+function copyShareLink() {
+  var url = ST.shareUrl || 'https://docs.google.com/spreadsheets/d/103Q-Zwh__0O0AodbsKq1bcBcI9mU1qDtFR8v1Nxt3MA';
+  navigator.clipboard.writeText(url).then(function() {
+    var btn = event.target;
+    btn.textContent = '✓ Copied!';
+    setTimeout(function(){ btn.textContent = 'Copy Link'; }, 2000);
+  }).catch(function() {
+    prompt('Copy this link:', url);
+  });
+}
+
+// ── LIVE VIEWER ───────────────────────────────────────────────────────────────
+var liveViewInterval = null;
+
+function startLiveViewer() {
+  renderLiveScore();
+  if (liveViewInterval) clearInterval(liveViewInterval);
+  liveViewInterval = setInterval(renderLiveScore, 15000);
+}
+
+function stopLiveViewer() {
+  if (liveViewInterval) clearInterval(liveViewInterval);
+  liveViewInterval = null;
+}
+
+function goBackToScorer() {
+  stopLiveViewer();
+  showScreen("scoring");
+}
+
+function renderLiveScore() {
+  var inn = getInnings();
+  var bt = getBattingTeam();
+  var bwt = getBowlingTeam();
+  var firstTeam = ST.teams[ST.firstBatTeamIdx];
+  var secondTeam = ST.teams[1 - ST.firstBatTeamIdx];
+
+  var co = Math.floor(inn.balls/6), rb = inn.balls%6;
+  var b1 = bt.players[ST.curStrikerIdx];
+  var b2 = bt.players[ST.curNonStrikerIdx];
+  var bowlerRec = inn.bowlers.filter(function(b){ return b.idx === ST.curBowlerIdx; })[0];
+  var bowlerPlayer = ST.curBowlerIdx >= 0 ? bwt.players[ST.curBowlerIdx] : null;
+  var rr = inn.balls > 0 ? (inn.runs / (inn.balls/6)).toFixed(2) : '0.00';
+  var now = new Date().toLocaleTimeString('en-IE', {hour:'2-digit', minute:'2-digit'});
+
+  var html = '<button class="back-to-scorer" onclick="goBackToScorer()">&#8592; Back to Scorer</button>';
+
+  // ── SCORE CARD ────────────────────────────────────────────────────────────
+  html += '<div class="live-score-card">';
+  html += '<div class="ls-batting-team">' + bt.name + ' batting · ' + (ST.innings===0?'1st':'2nd') + ' Innings</div>';
+  html += '<div class="ls-score-big"><div class="ls-runs">' + inn.runs + '</div><div class="ls-sep">/</div><div class="ls-wkts">' + inn.wkts + '</div></div>';
+  html += '<div class="ls-overs">Overs: <span>' + co + '.' + rb + '</span> / ' + ST.maxOvers + '</div>';
+
+  // RR / Target row
+  html += '<div class="ls-rr-row"><div class="ls-rr-box"><span class="ls-rr-lbl">Run Rate</span><span class="ls-rr-val">' + rr + '</span></div>';
+  if (ST.innings === 1) {
+    var target = ST.score[0].runs + 1;
+    var need = target - inn.runs;
+    var ballsLeft = ST.maxOvers*6 - inn.balls;
+    var rrr = ballsLeft > 0 ? (need/(ballsLeft/6)).toFixed(2) : '-';
+    html += '<div class="ls-rr-box"><span class="ls-rr-lbl">Target</span><span class="ls-rr-val">' + target + '</span></div>';
+    html += '<div class="ls-rr-box"><span class="ls-rr-lbl">Need</span><span class="ls-rr-val">' + need + ' off ' + ballsLeft + '</span></div>';
+  }
+  html += '</div>';
+
+  // Batters
+  html += '<div class="ls-batters">';
+  if (b1) {
+    var b1sr = b1.balls > 0 ? (b1.runs/b1.balls*100).toFixed(0) : '-';
+    html += '<div class="ls-batter on-strike"><div class="ls-batter-name"><span class="ls-strike-dot"></span>' + b1.name + '</div><div class="ls-batter-stats"><div class="ls-stat"><span class="ls-stat-val">' + b1.runs + '</span><span class="ls-stat-lbl">Runs</span></div><div class="ls-stat"><span class="ls-stat-val">' + b1.balls + '</span><span class="ls-stat-lbl">Balls</span></div><div class="ls-stat"><span class="ls-stat-val">' + b1sr + '</span><span class="ls-stat-lbl">SR</span></div></div></div>';
+  }
+  if (b2) {
+    var b2sr = b2.balls > 0 ? (b2.runs/b2.balls*100).toFixed(0) : '-';
+    html += '<div class="ls-batter"><div class="ls-batter-name">' + b2.name + '</div><div class="ls-batter-stats"><div class="ls-stat"><span class="ls-stat-val">' + b2.runs + '</span><span class="ls-stat-lbl">Runs</span></div><div class="ls-stat"><span class="ls-stat-val">' + b2.balls + '</span><span class="ls-stat-lbl">Balls</span></div><div class="ls-stat"><span class="ls-stat-val">' + b2sr + '</span><span class="ls-stat-lbl">SR</span></div></div></div>';
+  }
+  html += '</div>';
+
+  // Bowler
+  if (bowlerPlayer && bowlerRec) {
+    html += '<div class="ls-bowler"><span class="ls-bowler-lbl">Bowling</span><span class="ls-bowler-name">' + bowlerPlayer.name + '</span><span class="ls-bowler-figs">' + bowlerRec.wkts + '-' + bowlerRec.runs + ' (' + bowlerRec.overs + '.' + (inn.balls%6) + ')</span></div>';
+  }
+
+  // Extras
+  html += '<div class="ls-extras"><div class="ls-extra-cell"><span class="ls-extra-lbl">Wide</span><span class="ls-extra-val">' + inn.extras.wide + '</span></div><div class="ls-extra-cell"><span class="ls-extra-lbl">No Ball</span><span class="ls-extra-val">' + inn.extras.nb + '</span></div><div class="ls-extra-cell"><span class="ls-extra-lbl">Leg Bye</span><span class="ls-extra-val">' + inn.extras.lb + '</span></div><div class="ls-extra-cell"><span class="ls-extra-lbl">Bye</span><span class="ls-extra-val">' + inn.extras.b + '</span></div></div>';
+
+  // Batting scorecard
+  html += '<div class="ls-sc-section"><div class="ls-sc-title">Batting</div><table class="ls-table"><thead><tr><th>Batter</th><th>R</th><th>B</th><th>4s</th><th>6s</th><th>SR</th></tr></thead><tbody>';
+  bt.players.forEach(function(p, i) {
+    if (p.balls === 0 && !p.out && i !== ST.curStrikerIdx && i !== ST.curNonStrikerIdx) return;
+    var sr = p.balls > 0 ? (p.runs/p.balls*100).toFixed(0) : '-';
+    var isStriker = i === ST.curStrikerIdx, isNon = i === ST.curNonStrikerIdx;
+    var cls = p.out ? 'ls-out' : (isStriker||isNon ? 'ls-batting-now' : '');
+    var nameCell = p.name + (isStriker ? ' ●' : '');
+    var dismissalHtml = p.out ? '<div style="font-size:10px;color:rgba(255,255,255,0.3)">' + p.dismissal + '</div>' : '';
+    html += '<tr class="' + cls + '"><td>' + nameCell + dismissalHtml + '</td><td>' + p.runs + '</td><td>' + p.balls + '</td><td>' + p.fours + '</td><td>' + p.sixes + '</td><td>' + sr + '</td></tr>';
+  });
+  var totalExtras = inn.extras.wide+inn.extras.nb+inn.extras.lb+inn.extras.b;
+  html += '<tr><td style="color:rgba(255,255,255,0.35);font-size:10px">Extras</td><td colspan="5" style="text-align:right;color:rgba(255,255,255,0.35)">' + totalExtras + '</td></tr>';
+  html += '<tr class="ls-total"><td colspan="3">Total</td><td colspan="3">' + inn.runs + '/' + inn.wkts + ' (' + co + '.' + rb + ' ov)</td></tr>';
+  html += '</tbody></table></div>';
+
+  // Bowling scorecard
+  if (inn.bowlers.length) {
+    html += '<div class="ls-sc-section" style="margin-top:8px"><div class="ls-sc-title">Bowling</div><table class="ls-table"><thead><tr><th>Bowler</th><th>O</th><th>R</th><th>W</th><th>Econ</th></tr></thead><tbody>';
+    inn.bowlers.forEach(function(rec) {
+      var p = bwt.players[rec.idx];
+      if (!p) return;
+      var isNow = rec.idx === ST.curBowlerIdx;
+      var ballsInOver = isNow ? inn.balls%6 : 0;
+      var overStr = rec.overs + (ballsInOver > 0 ? '.' + ballsInOver : '.0');
+      var econ = rec.overs > 0 ? (rec.runs/rec.overs).toFixed(2) : '-';
+      html += '<tr class="' + (isNow?'ls-bowling-now':'') + '"><td>' + p.name + '</td><td>' + overStr + '</td><td>' + rec.runs + '</td><td>' + rec.wkts + '</td><td>' + econ + '</td></tr>';
+    });
+    html += '</tbody></table></div>';
+  }
+
+  // Previous innings
+  if (ST.innings === 1 && ST.score[0].balls > 0) {
+    var inn0 = ST.score[0];
+    var co0 = Math.floor(inn0.balls/6), rb0 = inn0.balls%6;
+    html += '<div class="ls-sc-section" style="margin-top:8px"><div class="ls-sc-title">' + firstTeam.name + ' — 1st Innings: ' + inn0.runs + '/' + inn0.wkts + ' (' + co0 + '.' + rb0 + ' ov)</div></div>';
+  }
+
+  html += '</div>'; // end live-score-card
+
+  var card = document.getElementById('live-score-card');
+  var refreshBar = document.getElementById('live-refresh-bar');
+  if (card) card.innerHTML = html;
+  if (refreshBar) refreshBar.innerHTML = '<span>🟢 Live</span> · Updated ' + now + ' · Auto-refreshes every 15s';
 }
 
 function newMatch() {
